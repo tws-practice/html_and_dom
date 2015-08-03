@@ -14,6 +14,11 @@ input[name*="choose"]{
   width: 10px;
 }
 
+#score{
+  color: red;
+  border-color: black;
+}
+
 .paper{
   width:700px;
   height: auto;
