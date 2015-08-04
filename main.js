@@ -11,9 +11,8 @@ function checkout() {
   FillInBlanks.checkAnwser(score);
   SingleChoose.checkAnwser(score);
   MultiChoose.checkAnwser(score);
+  Judge.checkAnwser(score);
+  Subjective.checkAnwser(score);
 
   score.showScore();
-
-
-
 }
