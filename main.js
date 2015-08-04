@@ -10,7 +10,7 @@ function checkout() {
 
   FillInBlanks.checkAnwser(score);
   SingleChoose.checkAnwser(score);
-  
+  MultiChoose.checkAnwser(score);
 
   score.showScore();
 
