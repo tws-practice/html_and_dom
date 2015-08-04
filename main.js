@@ -2,6 +2,27 @@ window.onload = function() {
 
 };
 
+function changeAnwser(radioName, spId) {
+  var radio = document.getElementsByName(radioName);
+  for (var i = 0; i < radio.length; i++) {
+    if (radio[i].checked) {
+      document.getElementById(spId).innerHTML = radio[i].value;
+    }
+  }
+}
+
+function changeMultiAnwser(choiceName,spId){
+  var choice = document.getElementsByName(choiceName);
+  var text = '';
+  for(var i = 0;i < choice.length;i++){
+    if(choice[i].checked){
+      text += choice[i].value;
+    }
+  }
+  document.getElementById(spId).innerHTML = text;
+}
+
+
 function checkout() {
   var score = document.getElementById('score');
 
@@ -10,8 +31,8 @@ function checkout() {
   var fibThree = document.getElementById('one-three');
   var fibFour = document.getElementById('one-four');
 
-  var chooseOne = document.getElementsByName('two-one');
-  var chooseTwo = document.getElementsByName('two-two');
+  var chooseOne = document.getElementById('q21').innerHTML;
+  var chooseTwo = document.getElementById('q22').innerHTML;
 
   var multiChooseOne = document.getElementsByName('three-one');
   var multiChooseTwo = document.getElementsByName('three-two');
@@ -21,11 +42,11 @@ function checkout() {
 
   var subjective = document.getElementById('five-one');
 
-  var isError = false;
   var _class = document.getElementById('class');
   var idNumber = document.getElementById('id-number');
   var name = document.getElementById('name');
 
+  var isError = false;
   if (!_class.value) {
     alert('请填写班级！');
     isError = true;
@@ -58,10 +79,10 @@ function checkout() {
     number += 5;
   }
 
-  if (chooseOne[0].checked) {
+  if (chooseOne === 'A') {
     number += 10;
   }
-  if (chooseTwo[0].checked) {
+  if (chooseTwo === 'A') {
     number += 10;
   }
 
@@ -83,7 +104,7 @@ function checkout() {
   if (subjective.value) {
     number += 20;
   }
-
+  alert('爽快的得到'+ number +'分!!!');
 
 
 
