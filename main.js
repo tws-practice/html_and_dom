@@ -7,7 +7,10 @@ function checkout() {
   }
 
   var score = new Score();
+
   FillInBlanks.checkAnwser(score);
+  SingleChoose.checkAnwser(score);
+  
 
   score.showScore();
 
