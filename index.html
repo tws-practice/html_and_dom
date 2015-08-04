@@ -1,87 +1,131 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <title>爽快的统一建模语言理论测试</title>
-    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="main.css"> -->
     <script type="text/javascript" src="main.js"></script>
   </head>
-  <body>
-    <div class="paper">
-      <div class="header">
+
+<body>
+
+      <header>
         <h1><span id="yeah">爽快的</span>统一建模语言理论测试</h1>
-      </div>
-      <div class="blank"></div>
-      <div class="info">
-        <div class="test-name">考试科目：<u> 统一建模语言 UML</u></div>
-        <div class="time">时间：<u> 100分钟</u></div>
-        <div class="score">分数：<input type="text" id="score" name="score" value="" readonly="readonly"></div>
-        <div class="class">班级：<input type="text" id="class" value="长腿班"></div>
-        <div class="id-number">学号：<input type="text" id="id-number" value="9527"></div>
-        <div class="name">姓名：<input type="text" id="name" value="湿踩墙"></div>
-      </div>
-      <br>
-      <div class="fib">
-        <div class="tittle"><b>一、   填空题</b></div>
-        <div class="question">
-          <p>1. UML 的中文全称是：<input type="text" id="one-one" value=""></p>
-          <p>2. 对象最突出的特征是：<input type="text" id="one-two" value="">,<input type="text" id="one-three" value="">,<input type="text" id="one-four" value=""></p>
-        </div>
-      </div>
-      <br>
-      <div class="choose">
-        <div class="tittle"><b>二、	 选择题</b></div>
-        <div class="question">
-          <p>1．UML 与软件工程的关系是：【<span id='q21'></span>】</p>
-          <p><input type="radio" name="two-one" value="A" onclick="changeAnwser('two-one','q21')">（A）UML 就是软件工程</p>
-          <p><input type="radio" name="two-one" value="B" onclick="changeAnwser('two-one','q21')">（B）UML 参与到软件工程中软件开发过程的几个阶段</p>
-          <p><input type="radio" name="two-one" value="C" onclick="changeAnwser('two-one','q21')">（C）UML 与软件工程无关</p>
-          <p><input type="radio" name="two-one" value="D" onclick="changeAnwser('two-one','q21')">（D）UML 是软件工程的一部分</p>
-          <p>2．Java 语言支持：【<span id='q22'></span>】</p>
-          <p><input type="radio" name="two-two" value="A" onclick="changeAnwser('two-two','q22')">（A）单继承</p>
-          <p><input type="radio" name="two-two" value="B" onclick="changeAnwser('two-two','q22')">（B）多继承</p>
-          <p><input type="radio" name="two-two" value="C" onclick="changeAnwser('two-two','q22')">（C）单继承和多继承都支持</p>
-          <p><input type="radio" name="two-two" value="D" onclick="changeAnwser('two-two','q22')">（D）单继承和多继承都不支持</p>
-        </div>
-      </div>
-      <br>
-      <div class="multi-choose">
-        <div class="tittle"><b>三、	 多选题</b></div>
-        <div class="question">
-          <p>1． 用例的粒度分为以下哪三种:【<span id='q31'></span>】</p>
-          <p><input type="checkbox" name="three-one" value="A" onclick="changeMultiAnwser('three-one','q31')">（A）概述级、</p>
-          <p><input type="checkbox" name="three-one" value="B" onclick="changeMultiAnwser('three-one','q31')">（B）需求级</p>
-          <p><input type="checkbox" name="three-one" value="C" onclick="changeMultiAnwser('three-one','q31')">（C）用户目标级、</p>
-          <p><input type="checkbox" name="three-one" value="D" onclick="changeMultiAnwser('three-one','q31')">（D）子功能级</p>
-          <p>2． 类图由以下哪三部分组成:【<span id='q32'></span>】</p>
-          <p><input type="checkbox" name="three-two" value="A" onclick="changeMultiAnwser('three-two','q32')">（A）名称(Name)</p>
-          <p><input type="checkbox" name="three-two" value="B" onclick="changeMultiAnwser('three-two','q32')">（B）属性(Attribute)</p>
-          <p><input type="checkbox" name="three-two" value="C" onclick="changeMultiAnwser('three-two','q32')">（C）操作(Operation)</p>
-          <p><input type="checkbox" name="three-two" value="D" onclick="changeMultiAnwser('three-two','q32')">（D）方法（Function）</p>
-        </div>
-      </div>
-      <br>
-      <div class="judge">
-        <div class="tittle"><b>四、	 判断题</b></div>
-        <div class="question">
-          <p>1． 用例图只是用于和客户交流和沟通的，用于确定需求。【√<input type="radio" name="four-one" value="">
-                                                           x<input type="radio" name="four-one" value="">】</p>
-          <p>2． 在状态图中，终止状态在一个状态图中允许有任意多个。【√<input type="radio" name="four-two" value="">
-                                                             x<input type="radio" name="four-two" value="">】</p>
-        </div>
-      </div>
-      <br>
-      <div class="subjective">
-        <div class="tittle"><b>五、	 简答题</b></div>
-        <div class="question">
-          <p>1． 简述什么是模型以及模型的表现形式?</p>
-          <textarea id="five-one" name="simple-answer" rows="8" cols="85"></textarea>
-        </div>
-      </div>
-      <br>
+      </header>
+        <table>
+          <tr>
+            <td>考试科目：<u> 统一建模语言 UML</u></td>
+            <td>时间：<u> 100分钟</u></td>
+            <td>分数：<span id="score"></span></td>
+          </tr>
+          <tr>
+            <td><label for="class">班级：</label><input type="text" id="class" value="长腿班"></td>
+            <td><label for="id-number">学号：</label><input type="text" id="id-number" value="9527"></td>
+            <td><label for="name">姓名：</label><input type="text" id="name" value="湿踩墙"></td>
+          </tr>
+        </table>
+
+      <section class="fib">
+        <header><h1>一、填空题</h1></header>
+          <ol>
+            <li>
+              <label for="one-one">UML 的中文全称</label>
+              <input type="text" id="one-one" value="">
+            </li>
+            <li>
+              <label for="one-two">对象最突出的特征是：</label>
+              <input type="text" id="one-two" value="">,<input type="text" id="one-three" value="">,<input type="text" id="one-four" value="">
+            </li>
+          </ol>
+      </section>
+
+      <section class="choose">
+        <header><h1>二、选择题</h1></header>
+          <ol>
+            <li>
+              <p>UML&nbsp;与软件工程的关系是：</p>
+              <label><input type="radio" name="two-one" value="A" >
+                （A）UML&nbsp;就是软件工程</label><br>
+              <label><input type="radio" name="two-one" value="B" >
+                （B）UML&nbsp;参与到软件工程中软件开发过程的几个阶段</label><br>
+              <label><input type="radio" name="two-one" value="C" >
+                （C）UML&nbsp;与软件工程无关</label><br>
+              <label><input type="radio" name="two-one" value="D" >
+                （D）UML&nbsp;是软件工程的一部分</label><br>
+            </li>
+            <li>
+              <p>Java&nbsp;语言支持：</p>
+              <label><input type="radio" name="two-two" value="A" >
+                （A）单继承</label><br>
+              <label><input type="radio" name="two-two" value="B" >
+                （B）多继承</label><br>
+              <label><input type="radio" name="two-two" value="C" >
+                （C）单继承和多继承都支持</label><br>
+              <label><input type="radio" name="two-two" value="D" >
+                （D）单继承和多继承都不支持</label><br>
+            </li>
+          </ol>
+      </section>
+
+      <section class="multi-choose">
+        <header><h1>三、多选题</h1></header>
+          <ol>
+            <li>
+              <p>用例的粒度分为以下哪三种:</p>
+              <label><input type="checkbox" name="three-one" value="A" >
+                （A）概述级</label><br>
+              <label><input type="checkbox" name="three-one" value="B" >
+                （B）需求级</label><br>
+              <label><input type="checkbox" name="three-one" value="C" >
+                （C）用户目标级</label><br>
+              <label><input type="checkbox" name="three-one" value="D" >
+                （D）子功能级</label><br>
+            </li>
+            <li>
+              <p>类图由以下哪三部分组成:</p>
+              <label><input type="checkbox" name="three-two" value="A" >
+                （A）名称(Name)</label><br>
+              <label><input type="checkbox" name="three-two" value="B" >
+                （B）属性(Attribute)</label><br>
+              <label><input type="checkbox" name="three-two" value="C" >
+                （C）操作(Operation)</label><br>
+              <label><input type="checkbox" name="three-two" value="D" >
+                （D）方法（Function）</label><br>
+            </li>
+          </ol>
+      </section>
+
+      <section class="judge">
+        <header><h1>四、判断题</h1></header>
+          <ol>
+            <li>
+              <p>用例图只是用于和客户交流和沟通的，用于确定需求。
+              √<input type="radio" name="four-one" value="">
+              x<input type="radio" name="four-one" value=""></p>
+
+            </li>
+            <li>
+              <p>在状态图中，终止状态在一个状态图中允许有任意多个。
+              √<input type="radio" name="four-two" value="">
+              x<input type="radio" name="four-two" value=""></p>
+            </li>
+          </ol>
+      </section>
+
+      <section class="subjective">
+        <header><h1>五、简答题</h1></header>
+          <ol>
+            <li>
+              <p>简述什么是模型以及模型的表现形式?</p>
+              <textarea id="five-one" name="simple-answer" rows="8" cols="85"></textarea>
+            </li>
+          </ol>
+      </section>
+
       <div class="submit">
         <button id="submit" type="submit" onclick="checkout()"> 爽快地提交</button>
       </div>
-    </div>
+
   </body>
 </html>

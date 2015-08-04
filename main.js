@@ -2,26 +2,6 @@ window.onload = function() {
 
 };
 
-function changeAnwser(radioName, spId) {
-  var radio = document.getElementsByName(radioName);
-  for (var i = 0; i < radio.length; i++) {
-    if (radio[i].checked) {
-      document.getElementById(spId).innerHTML = radio[i].value;
-    }
-  }
-}
-
-function changeMultiAnwser(choiceName,spId){
-  var choice = document.getElementsByName(choiceName);
-  var text = '';
-  for(var i = 0;i < choice.length;i++){
-    if(choice[i].checked){
-      text += choice[i].value;
-    }
-  }
-  document.getElementById(spId).innerHTML = text;
-}
-
 
 function checkout() {
   var score = document.getElementById('score');
@@ -31,8 +11,8 @@ function checkout() {
   var fibThree = document.getElementById('one-three');
   var fibFour = document.getElementById('one-four');
 
-  var chooseOne = document.getElementById('q21').innerHTML;
-  var chooseTwo = document.getElementById('q22').innerHTML;
+  var chooseOne = document.getElementsByName('two-one');
+  var chooseTwo = document.getElementsByName('two-two');
 
   var multiChooseOne = document.getElementsByName('three-one');
   var multiChooseTwo = document.getElementsByName('three-two');
@@ -79,10 +59,10 @@ function checkout() {
     number += 5;
   }
 
-  if (chooseOne === 'A') {
+  if (chooseOne[0].checked) {
     number += 10;
   }
-  if (chooseTwo === 'A') {
+  if (chooseTwo[0].checked) {
     number += 10;
   }
 
