@@ -1,15 +1,20 @@
-function Judge(){
-
+function Judge(inputs,anwser){
+  this.inputs = inputs;
+  this.anwser = anwser;
 }
 
-Judge.checkAnwser = function(score){
-  var judgeOne = document.getElementsByName('four-one');
-  var judgeTwo = document.getElementsByName('four-two');
-
-  if (judgeOne[1].checked) {
-    score.add(10);
+Judge.prototype.getInputsValues = function(){
+  for(var i = 0;i < this.inputs.length;i++){
+    this.inputs[i] = document.getElementsByName(this.inputs[i]);
   }
-  if (judgeTwo[0].checked) {
-    score.add(10);
+};
+
+Judge.prototype.checkAnwser = function(score){
+  for(var i = 0;i < this.inputs.length;i++){
+    for(var x = 0;x <this.inputs[i].length;x++){
+      if(this.inputs[i][x].checked && this.inputs[i][x].value === this.anwser[i]){
+        score.add(10);
+      }
+    }
   }
 };

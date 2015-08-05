@@ -1,16 +1,24 @@
-function MultiChoose(){
-
+function MultiChoose(inputs,anwser){
+  this.inputs = inputs;
+  this.anwser = anwser;
 }
 
-MultiChoose.checkAnwser = function(score){
-  var multiChooseOne = document.getElementsByName('three-one');
-  var multiChooseTwo = document.getElementsByName('three-two');
-
-  if (multiChooseOne[0].checked && multiChooseOne[1].checked && !multiChooseOne[2].checked && multiChooseOne[3].checked) {
-    score.add(10);
+MultiChoose.prototype.getInputsValues = function(){
+  for(var i = 0;i < this.inputs.length;i++){
+    this.inputs[i] = document.getElementsByName(this.inputs[i]);
   }
+};
 
-  if (multiChooseTwo[0].checked && multiChooseTwo[1].checked && multiChooseTwo[2].checked && !multiChooseTwo[3].checked) {
-    score.add(10);
+MultiChoose.prototype.checkAnwser = function(score){
+  for(var i = 0;i < this.inputs.length;i++){
+    var inputString = '';
+    for(var x =0;x < this.inputs[i].length;x++){
+      if(this.inputs[i][x].checked){
+        inputString += this.inputs[i][x].value;
+      }
+    }
+    if(inputString === this.anwser[i]){
+      score.add(10);
+    }
   }
 };

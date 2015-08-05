@@ -1,16 +1,20 @@
-function SingleChoose(){
-
+function SingleChoose(inputs,anwser){
+  this.inputs = inputs;
+  this.anwser = anwser;
 }
 
-SingleChoose.checkAnwser = function(score){
-  var chooseOne = document.getElementsByName('two-one');
-  var chooseTwo = document.getElementsByName('two-two');
-
-  if (chooseOne[0].checked) {
-    score.add(10);
+SingleChoose.prototype.getInputsValues = function(){
+  for(var i = 0;i < this.inputs.length;i++){
+    this.inputs[i] = document.getElementsByName(this.inputs[i]);
   }
-  if (chooseTwo[0].checked) {
-    score.add(10);
-  }
+};
 
+SingleChoose.prototype.checkAnwser = function(score){
+  for(var i = 0;i < this.inputs.length;i++){
+    for(var x = 0;x <this.inputs[i].length;x++){
+      if(this.inputs[i][x].checked && this.inputs[i][x].value === this.anwser[i]){
+        score.add(10);
+      }
+    }
+  }
 };

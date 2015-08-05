@@ -1,23 +1,24 @@
-function FillInBlanks(){
-
+function FillInBlanks(inputs,anwser){
+  this.inputs = inputs;
+  this.anwser = anwser;
 }
 
-FillInBlanks.checkAnwser = function(score){
-  var fibOne = document.getElementById('one-one').value;
-  if (fibOne === '统一建模语言') {
-    score.add(5);
-  }
-
-  var fibTwo = [document.getElementById('one-two').value,
-                document.getElementById('one-three').value,
-                document.getElementById('one-four').value];
-  var fibTwoAnwser = ['封装性','继承性','多态性'];
-  var rightAnwser = 0;
-
-  fibTwo.forEach(function(oneAnwser){
-    if(fibTwoAnwser.indexOf(oneAnwser)!==-1){
-      rightAnwser++;
+FillInBlanks.prototype.getInputsValues = function(){
+  for(var i = 0;i < this.inputs.length;i++){
+    for(var x = 0;x < this.inputs[i].length;x++){
+      this.inputs[i][x] = (document.getElementById(this.inputs[i][x]).value);
     }
-  });
-  score.add(rightAnwser*5)
+  }
+};
+
+
+FillInBlanks.prototype.checkAnwser = function(score){
+  for(var i = 0;i < this.inputs.length;i++){
+    for(var x = 0;x < this.anwser[i].length;x++){
+      if(this.anwser[i].indexOf(this.inputs[i][x])!==-1){
+        this.anwser[i].splice(this.anwser[i].indexOf(this.inputs[i][x]),1);
+        score.add(5);
+      }
+    }
+  }
 };
