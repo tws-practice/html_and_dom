@@ -1,6 +1,6 @@
-function MultiChoose(inputs,anwser){
+function MultiChoose(inputs,answer){
   this.inputs = inputs;
-  this.anwser = anwser;
+  this.answer = answer;
 }
 
 MultiChoose.prototype.getInputsValues = function(){
@@ -9,7 +9,7 @@ MultiChoose.prototype.getInputsValues = function(){
   }
 };
 
-MultiChoose.prototype.checkAnwser = function(score){
+MultiChoose.prototype.checkAnswer = function(score){
   for(var i = 0;i < this.inputs.length;i++){
     var inputString = '';
     for(var x =0;x < this.inputs[i].length;x++){
@@ -17,7 +17,7 @@ MultiChoose.prototype.checkAnwser = function(score){
         inputString += this.inputs[i][x].value;
       }
     }
-    if(inputString === this.anwser[i]){
+    if(inputString === this.answer[i]){
       score.add(10);
     }
   }

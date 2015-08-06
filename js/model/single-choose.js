@@ -1,6 +1,6 @@
-function SingleChoose(inputs,anwser){
+function SingleChoose(inputs,answer){
   this.inputs = inputs;
-  this.anwser = anwser;
+  this.answer = answer;
 }
 
 SingleChoose.prototype.getInputsValues = function(){
@@ -9,10 +9,10 @@ SingleChoose.prototype.getInputsValues = function(){
   }
 };
 
-SingleChoose.prototype.checkAnwser = function(score){
+SingleChoose.prototype.checkAnswer = function(score){
   for(var i = 0;i < this.inputs.length;i++){
     for(var x = 0;x <this.inputs[i].length;x++){
-      if(this.inputs[i][x].checked && this.inputs[i][x].value === this.anwser[i]){
+      if(this.inputs[i][x].checked && this.inputs[i][x].value === this.answer[i]){
         score.add(10);
       }
     }

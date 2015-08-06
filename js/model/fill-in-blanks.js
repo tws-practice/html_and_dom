@@ -1,6 +1,6 @@
-function FillInBlanks(inputs,anwser){
+function FillInBlanks(inputs,answer){
   this.inputs = inputs;
-  this.anwser = anwser;
+  this.answer = answer;
 }
 
 FillInBlanks.prototype.getInputsValues = function(){
@@ -12,11 +12,10 @@ FillInBlanks.prototype.getInputsValues = function(){
 };
 
 
-FillInBlanks.prototype.checkAnwser = function(score){
+FillInBlanks.prototype.checkAnswer = function(score){
   for(var i = 0;i < this.inputs.length;i++){
-    for(var x = 0;x < this.anwser[i].length;x++){
-      if(this.anwser[i].indexOf(this.inputs[i][x])!==-1){
-        this.anwser[i].splice(this.anwser[i].indexOf(this.inputs[i][x]),1);
+    for(var x = 0;x < this.answer[i].length;x++){
+      if(this.answer[i].indexOf(this.inputs[i][x])!==-1){
         score.add(5);
       }
     }

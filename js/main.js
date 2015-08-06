@@ -9,34 +9,34 @@ function checkout() {
   var score = new Score();
 
   var fibInputs = [['one-one'],['one-two','one-three','one-four']];
-  var fibAnwser = [['统一建模语言'],['1','2','3']];
-  var fillInBlanks = new FillInBlanks(fibInputs,fibAnwser);
+  var fibAnswer = [['统一建模语言'],['1','2','3']];
+  var fillInBlanks = new FillInBlanks(fibInputs,fibAnswer);
   fillInBlanks.getInputsValues();
-  fillInBlanks.checkAnwser(score);
+  fillInBlanks.checkAnswer(score);
 
   var singleChooseInputs = ['two-one','two-two'];
-  var singleChooseAnwser = ['A','A'];
-  var singleChoose = new SingleChoose(singleChooseInputs,singleChooseAnwser);
+  var singleChooseAnswer = ['A','A'];
+  var singleChoose = new SingleChoose(singleChooseInputs,singleChooseAnswer);
   singleChoose.getInputsValues();
-  singleChoose.checkAnwser(score);
+  singleChoose.checkAnswer(score);
 
   var multiChooseInputs = ['three-one','three-two'];
-  var multiChooseAnwser = ['ABD','ABC'];
-  var multiChoose = new MultiChoose(multiChooseInputs,multiChooseAnwser);
+  var multiChooseAnswer = ['ABD','ABC'];
+  var multiChoose = new MultiChoose(multiChooseInputs,multiChooseAnswer);
   multiChoose.getInputsValues();
-  multiChoose.checkAnwser(score);
+  multiChoose.checkAnswer(score);
 
   var judgeInputs = ['four-one','four-two'];
-  var judgeAnwser = ['false','true'];
-  var judge = new Judge(judgeInputs,judgeAnwser);
+  var judgeAnswer = ['false','true'];
+  var judge = new Judge(judgeInputs,judgeAnswer);
   judge.getInputsValues();
-  judge.checkAnwser(score);
+  judge.checkAnswer(score);
 
   var subjectiveInputs = ['five-one'];
-  var SubjectiveAnwser = ['我不会'];
-  var subjective = new Subjective(subjectiveInputs,SubjectiveAnwser);
+  var SubjectiveAnswer = ['我不会'];
+  var subjective = new Subjective(subjectiveInputs,SubjectiveAnswer);
   subjective.getInputsValues();
-  subjective.checkAnwser(score);
+  subjective.checkAnswer(score);
 
   score.showScore();
 }

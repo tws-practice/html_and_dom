@@ -1,6 +1,6 @@
-function Subjective(inputs,anwser){
+function Subjective(inputs,answer){
   this.inputs = inputs;
-  this.anwser = anwser;
+  this.answer = answer;
 }
 
 Subjective.prototype.getInputsValues = function(){
@@ -9,9 +9,9 @@ Subjective.prototype.getInputsValues = function(){
   }
 };
 
-Subjective.prototype.checkAnwser = function(score){
+Subjective.prototype.checkAnswer = function(score){
   for(var i = 0;i < this.inputs.length;i++){
-    if(this.inputs[i].val() === this.anwser[i]){
+    if(this.inputs[i].val() === this.answer[i]){
       score.add(20);
     }
   }
