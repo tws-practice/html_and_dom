@@ -5,7 +5,7 @@ function Judge(inputs,anwser){
 
 Judge.prototype.getInputsValues = function(){
   for(var i = 0;i < this.inputs.length;i++){
-    this.inputs[i] = document.getElementsByName(this.inputs[i]);
+    this.inputs[i] = $('body').find("input[name|="+this.inputs[i]+"]");
   }
 };
 

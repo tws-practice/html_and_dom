@@ -1,7 +1,7 @@
 function checkout() {
-  var information = new Information(document.getElementById('class-name').value,
-                                    document.getElementById('id-number').value,
-                                    document.getElementById('student-name').value);
+  var information = new Information($('#class-name').val(),
+                                    $('#id-number').val(),
+                                    $('#student-name').val());
   if(!information.check()){
     return false;
   }

@@ -6,7 +6,7 @@ function FillInBlanks(inputs,anwser){
 FillInBlanks.prototype.getInputsValues = function(){
   for(var i = 0;i < this.inputs.length;i++){
     for(var x = 0;x < this.inputs[i].length;x++){
-      this.inputs[i][x] = (document.getElementById(this.inputs[i][x]).value);
+      this.inputs[i][x] = ($('#'+this.inputs[i][x]).val());
     }
   }
 };
