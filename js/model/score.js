@@ -7,5 +7,5 @@ Score.prototype.add =function(number){
 };
 
 Score.prototype.showScore = function(){
-  document.getElementById('score').innerHTML = this.score;
+  document.getElementById('score').value = this.score;
 };
