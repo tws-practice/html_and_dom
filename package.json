@@ -1,0 +1,23 @@
+{
+  "name": "web-basic",
+  "version": "0.1.0",
+  "description": "test system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simpletrain/web-basic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simpletrain/web-basic/issues"
+  },
+  "homepage": "https://github.com/simpletrain/web-basic#readme",
+  "dependencies": {
+    "ejs": "^2.3.3",
+    "express": "^4.13.3"
+  }
+}
