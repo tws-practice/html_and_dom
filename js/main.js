@@ -11,7 +11,7 @@ function checkout() {
     var score = new Score();
 
     var fibInputs = [['one-one'],['one-two','one-three','one-four']];
-    var fibAnswer = [['统一建模语言'],['1','2','3']];
+    var fibAnswer = [['统一建模语言'],['封装性','多态性','继承性']];
     var fillInBlanks = new FillInBlanks(fibInputs,fibAnswer);
     fillInBlanks.getInputsValues();
     fillInBlanks.checkAnswer(score);
@@ -41,5 +41,6 @@ function checkout() {
     subjective.checkAnswer(score);
 
     score.showScore();
-  });
+
+   });
   }
