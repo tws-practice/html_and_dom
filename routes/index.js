@@ -17,6 +17,7 @@ router.post('/', function (req, res) {
     var data = req.body;
     console.log(data);
     var score = new Score(data);
+    score.calculate();
     res.render('index',
         {
             score: score.score,
