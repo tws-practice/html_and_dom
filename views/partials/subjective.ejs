@@ -1,7 +1,15 @@
+<% var question = data.questions.subjective %>
+
 <section class="panel panel-default">
-    <div class="panel-heading"><h3 class="panel-title">五、简答题</h3></div>
+    <div class="panel-heading"><h3 class="panel-title">五、<%= question.title %></h3></div>
     <div class="panel-body">
-        <label for="five-one">1.简述什么是模型以及模型的表现形式?</label>
-        <textarea class="form-control" id="five-one" name="simple-answer" rows="8" cols="85"></textarea>
+        <ol>
+            <% for(var i = 0;i < question.detail.length; i++) { %>
+            <li>
+                <label><%= question.detail[i].topic %><br>
+                    <textarea class="form-control" name="subjective<%= i %>" rows="8" cols="110"></textarea></label><br>
+            </li>
+            <% } %>
+        </ol>
     </div>
 </section>

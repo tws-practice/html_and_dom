@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html>
 
-<head><% include partials/head.ejs %></head>
+<head>
+    <% include partials/head.ejs %>
+</head>
 
 <body>
 
 <div class="container">
 
-  <header class="text-center">
-    <h1><span id="yeah">爽快的</span>统一建模语言理论测试</h1>
-  </header>
-  <br>
+    <header class="text-center">
+        <h1><span id="yeah">爽快的</span>统一建模语言理论测试</h1>
+    </header>
+    <br>
 
-  <% include partials/information.ejs %>
+    <form id="form" action="/" method="post" autocomplete="off">
 
-  <% include partials/fill-in-blanks.ejs %>
+     <% include partials/information.ejs %>
 
-  <% include partials/single-choose.ejs %>
+     <% include partials/fill-in-blanks.ejs %>
 
-  <% include partials/multi-choose.ejs %>
+     <% include partials/single-choose.ejs %>
 
-  <% include partials/judge.ejs %>
+     <% include partials/multi-choose.ejs %>
 
-  <% include partials/subjective.ejs %>
+     <% include partials/judge.ejs %>
 
-  <div class="col-md-3 col-md-offset-9">
-    <button id="submit" type="submit" onclick="checkout()" class="btn btn-info btn-block btn-group-lg"> 爽快地提交
-    </button>
-  </div>
+     <% include partials/subjective.ejs %>
+
+
+    <div class="col-md-3 col-md-offset-9">
+        <input type="submit" value="爽快地提交" class="btn btn-info btn-block btn-group-lg"/>
+    </div>
+
+    </form>
 
 </div>
 

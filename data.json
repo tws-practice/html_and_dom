@@ -1,13 +1,13 @@
 {
   "title": [
-    "统一建模语言理论测试"
+    "爽快的统一建模语言理论测试"
   ],
-  "test_detail": {
-    "name": "统一建模语言UML",
+  "information": {
+    "subject": "统一建模语言UML",
     "time": "100分"
   },
   "questions": {
-    "fill_in_blank": {
+    "fill_in_blanks": {
       "title": "填空题(每空5分，共4空)",
       "detail": [
         {
@@ -27,7 +27,7 @@
       ],
       "score": 5
     },
-    "single_choice": {
+    "single_choose": {
       "title": "选择题(每题10分，共2题)",
       "detail": [
         {
@@ -53,7 +53,7 @@
       ],
       "score": 10
     },
-    "multiple_choice": {
+    "multi_choose": {
       "title": "多选题(每题10分，共2题)",
       "detail": [
         {
@@ -61,8 +61,8 @@
           "choices": {
             "A": "概述级",
             "B": "需求级",
-            "C": "UML与软件工程无关",
-            "D": "UML是软件工程的一部分"
+            "C": "用户目标级",
+            "D": "子功能级"
           },
           "answer": "ABD"
         },
@@ -85,23 +85,23 @@
         {
           "topic": "用例图只是用于和客户交流和沟通的,用于确定需求。",
           "choices": {
-            "yes": "对",
-            "no": "错"
+            "true": "true",
+            "false": "false"
           },
           "answer": "no"
         },
         {
           "topic": "在状态图中,终止状态在一个状态图中允许有任意多个。",
           "choices": {
-            "yes": "对",
-            "no": "错"
+            "true": "true",
+            "false": "false"
           },
           "answer": "yes"
         }
       ],
       "score": 10
     },
-    "simple_answer": {
+    "subjective": {
       "title": "简答题(每题20分，共1题)",
       "detail": [
         {

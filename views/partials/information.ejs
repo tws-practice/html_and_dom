@@ -5,13 +5,13 @@
                 <label>科目：</label>
             </div>
             <div class="col-md-3">
-                <em>统一建模语言 UML</em>
+                <em><%= data.information.subject %></em>
             </div>
             <div class=" col-md-1">
                 <label>时间：</label>
             </div>
             <div class=" col-md-3">
-                <em>100分钟</em>
+                <em><%= data.information.time %></em>
             </div>
             <div class="col-md-1">
                 <label>分数：</label>
@@ -24,7 +24,7 @@
 </div>
 <div class="panel panel-default">
     <div class="panel-body">
-        <form class="form-inline">
+        <section class="form-inline">
             <div id="form-class" class="form-horizontal">
                 <div class="col-md-1">
                     <label for="class-name" class="control-label">班级：</label>
@@ -49,6 +49,6 @@
                     <input type="text" id="student-name" value="" placeholder="湿踩墙" class="form-control">
                 </div>
             </div>
-        </form>
+        </section>
     </div>
 </div>

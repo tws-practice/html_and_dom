@@ -1,18 +1,18 @@
+<% var question = data.questions.judge %>
+
 <section class="panel panel-default">
-    <div class="panel-heading"><h3 class="panel-title">四、判断题</h3></div>
+    <div class="panel-heading"><h3 class="panel-title">四、<%= question.title %></h3></div>
     <div class="panel-body">
         <ol>
+            <% for(var i = 0;i < question.detail.length; i++) { %>
             <li>
-                <p>用例图只是用于和客户交流和沟通的，用于确定需求。
-                    √<input type="radio" name="four-one" value="true">
-                    x<input type="radio" name="four-one" value="false"></p>
-
+                <p><%= question.detail[i].topic %></p>
+                <% for(var choice in question.detail[i].choices) { %>
+                <label><input type="radio" name="judge<%= i %>" value="<%= choice %>">
+                    <%= question.detail[i].choices[choice] %></label><br>
+                <% } %>
             </li>
-            <li>
-                <p>在状态图中，终止状态在一个状态图中允许有任意多个。
-                    √<input type="radio" name="four-two" value="true">
-                    x<input type="radio" name="four-two" value="false"></p>
-            </li>
+            <% } %>
         </ol>
     </div>
 </section>

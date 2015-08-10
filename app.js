@@ -18,8 +18,11 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
+
+app.locals.data = require('./data.json');
 
 app.use('/', routes);
 
@@ -27,7 +30,11 @@ app.get('/', function(request, response) {
   response.render('index');
 });
 
-
+app.post('/', function(req, res){
+  res.render('index');
+  var data = req.body;
+  console.log(data);
+});
 
 
 
