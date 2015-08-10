@@ -18,9 +18,9 @@ Score.prototype.calculate = function(){
     var multiChoose = new MultiChoose(this.data,jsonFile);
     multiChoose.checkAnswer(this);
     var judge = new Judge(this.data,jsonFile);
-    console.log(judge);
     judge.checkAnswer(this);
-    //var subjective = new Subjective(this.data,jsonFile);
+    var subjective = new Subjective(this.data,jsonFile);
+    subjective.checkAnswer(this);
 };
 
 Score.prototype.add =function(number){
