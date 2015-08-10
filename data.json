@@ -88,7 +88,7 @@
             "true": "true",
             "false": "false"
           },
-          "answer": "no"
+          "answer": "false"
         },
         {
           "topic": "在状态图中,终止状态在一个状态图中允许有任意多个。",
@@ -96,7 +96,7 @@
             "true": "true",
             "false": "false"
           },
-          "answer": "yes"
+          "answer": "true"
         }
       ],
       "score": 10
