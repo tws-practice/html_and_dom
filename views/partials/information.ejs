@@ -17,7 +17,7 @@
                 <label>分数：</label>
             </div>
             <div class=" col-md-3">
-                <span id="score" class="text-danger"></span>
+                <span id="score" class="text-danger"><%= score %></span>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
                     <label for="class-name" class="control-label">班级：</label>
                 </div>
                 <div class="col-md-3">
-                    <input type="text" id="class-name" value="" placeholder="长腿班" class="form-control">
+                    <input type="text" id="class-name" name="className" placeholder="长腿班" class="form-control" value=<%= className %>>
                 </div>
             </div>
             <div id="form-id" class="form-horizontal">
@@ -38,7 +38,7 @@
                     <label for="id-number" class="control-label">学号：</label>
                 </div>
                 <div class="col-md-3">
-                    <input type="text" id="id-number" value="" placeholder="9527" class="form-control">
+                    <input type="text" id="id-number" name="idNumber" placeholder="9527" class="form-control" value=<%= idNumber %>>
                 </div>
             </div>
             <div id="form-name" class="form-horizontal">
@@ -46,7 +46,7 @@
                     <label for="student-name" class="control-label">姓名：</label>
                 </div>
                 <div class="col-md-3">
-                    <input type="text" id="student-name" value="" placeholder="湿踩墙" class="form-control">
+                    <input type="text" id="student-name" name="studentName" placeholder="湿踩墙" class="form-control" value=<%= studentName %>>
                 </div>
             </div>
         </section>
