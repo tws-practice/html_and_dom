@@ -13,8 +13,11 @@ function Score(data){
 Score.prototype.calculate = function(){
     var fillInBlanks =  new FillInBlanks(this.data,jsonFile);
     fillInBlanks.checkAnswer(this);
-    //var singleChoose = new SingleChoose(this.data,jsonFile);
-    //var multiChoose = new MultiChoose(this.data,jsonFile);
+    var singleChoose = new SingleChoose(this.data,jsonFile);
+    singleChoose.checkAnswer(this);
+    var multiChoose = new MultiChoose(this.data,jsonFile);
+    console.log(multiChoose);
+    multiChoose.checkAnswer(this);
     //var judge = new Judge(this.data,jsonFile);
     //var subjective = new Subjective(this.data,jsonFile);
 };
