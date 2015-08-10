@@ -14,7 +14,8 @@
           "topic": "UML的中文全称是:",
           "answer": [
             "统一建模语言"
-          ]
+          ],
+          "input":""
         },
         {
           "topic": "对象最突出的特征是:",
@@ -22,7 +23,8 @@
             "封装性",
             "继承性",
             "多态性"
-          ]
+          ],
+          "input":""
         }
       ],
       "score": 5
@@ -38,7 +40,8 @@
             "C": "UML与软件工程无关",
             "D": "UML是软件工程的一部分"
           },
-          "answer": "A"
+          "answer": "A",
+          "input":""
         },
         {
           "topic": "Java 语言支持:",
@@ -48,7 +51,8 @@
             "C": "单继承和多继承都支持",
             "D": "继承和多继承都不支持"
           },
-          "answer": "A"
+          "answer": "A",
+          "input":""
         }
       ],
       "score": 10
@@ -64,7 +68,8 @@
             "C": "用户目标级",
             "D": "子功能级"
           },
-          "answer": "ABD"
+          "answer": "ABD",
+          "input":""
         },
         {
           "topic": "类图由以下哪三部分组成。",
@@ -74,7 +79,8 @@
             "C": "操作(Operation)",
             "D": "方法(Function)"
           },
-          "answer": "ABC"
+          "answer": "ABC",
+          "input":""
         }
       ],
       "score": 10
@@ -88,7 +94,8 @@
             "true": "true",
             "false": "false"
           },
-          "answer": "false"
+          "answer": "false",
+          "input":""
         },
         {
           "topic": "在状态图中,终止状态在一个状态图中允许有任意多个。",
@@ -96,7 +103,8 @@
             "true": "true",
             "false": "false"
           },
-          "answer": "true"
+          "answer": "true",
+          "input":""
         }
       ],
       "score": 10
@@ -106,7 +114,8 @@
       "detail": [
         {
           "topic": "简述什么是模型以及模型的表现形式?",
-          "answer": "模型是对现实世界的简化和抽象,模型是对所研究的系统、过程、事物或概念的一种表达形式。"
+          "answer": "模型是对现实世界的简化和抽象,模型是对所研究的系统、过程、事物或概念的一种表达形式。",
+          "input":""
         }
       ],
       "score": 20
