@@ -7,9 +7,13 @@
             <% for(var i = 0;i < question.detail.length; i++) { %>
             <li>
                 <p><%= question.detail[i].topic %></p>
+                <% var x = 0 %>
                 <% for(var choice in question.detail[i].choices) { %>
-                <label><input type="radio" name="single_choose<%= i %>" value="<%= choice %>">
+                <label><input type="radio" name="single_choose<%= i %>" value="<%= choice %>"<% if(single_choose_detail){ %>
+
+                            <%  } %>>
                     （<%= choice %>）<%= question.detail[i].choices[choice] %></label><br>
+                <% x++ %>
                 <% } %>
             </li>
             <% } %>
