@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var Score = require('../controller/score.js');
-var dataFeedBack = require('../controller/data-feed-back.js');
 var jsonFile = require('../data.json');
 
 /* GET home page. */

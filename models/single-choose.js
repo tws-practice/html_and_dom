@@ -8,3 +8,7 @@ SingleChooseTopic.prototype.constructor = SingleChooseTopic;
 SingleChooseTopic.prototype.getScore = function(){
 
 };
+
+
+
+module.exports = SingleChooseTopic;

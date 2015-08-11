@@ -8,3 +8,7 @@ SubjectiveTopic.prototype.constructor = SubjectiveTopic;
 SubjectiveTopic.prototype.getScore = function(){
 
 };
+
+
+
+module.exports = SubjectiveTopic;

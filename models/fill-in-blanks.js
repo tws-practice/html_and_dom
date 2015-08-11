@@ -8,3 +8,6 @@ FillInBlanksTopic.prototype.constructor = FillInBlanksTopic;
 FillInBlanksTopic.prototype.getScore = function(){
 
 };
+
+
+module.exports = FillInBlanksTopic;

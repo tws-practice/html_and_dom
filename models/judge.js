@@ -8,3 +8,7 @@ JudgeTopic.prototype.constructor = JudgeTopic;
 JudgeTopic.prototype.getScore = function(){
 
 };
+
+
+
+module.exports = JudgeTopic;

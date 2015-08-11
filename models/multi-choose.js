@@ -8,3 +8,8 @@ MultiChooseTopic.prototype.constructor = MultiChooseTopic;
 MultiChooseTopic.prototype.getScore = function(){
 
 };
+
+
+
+
+module.exports = MultiChooseTopic;
