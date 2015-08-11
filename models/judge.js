@@ -1,3 +1,5 @@
+var Topic = require('./topic.js');
+
 function JudgeTopic(question,options,answer,score,input){
     Topic.call(this,'Judge',question,options,answer,score,input);
 }

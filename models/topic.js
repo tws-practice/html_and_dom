@@ -10,3 +10,7 @@ function Topic(type,question,options,answer,score,input){
 Topic.prototype.getScore = function(){
 
 };
+
+
+
+module.exports = Topic;

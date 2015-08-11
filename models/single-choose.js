@@ -1,3 +1,5 @@
+var Topic = require('./topic.js');
+
 function SingleChooseTopic(question,options,answer,score,input){
     Topic.call(this,'single-choose',question,options,answer,score,input);
 }

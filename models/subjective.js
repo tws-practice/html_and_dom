@@ -1,3 +1,5 @@
+var Topic = require('./topic.js');
+
 function SubjectiveTopic(question,options,answer,score,input){
     Topic.call(this,'subjective',question,options,answer,score,input);
 }

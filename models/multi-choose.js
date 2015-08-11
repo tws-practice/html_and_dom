@@ -1,3 +1,5 @@
+var Topic = require('./topic.js');
+
 function MultiChooseTopic(question,options,answer,score,input){
     Topic.call(this,'multi-choose',question,options,answer,score,input);
 }
