@@ -1,13 +1,9 @@
 $(document).ready(function () {
     $('#submit').on('click', function (){
-        var userInput = $('form').serializeArray().reduce(function(obj, item) {
-            obj[item.name] = obj[item.name] || [];
-            obj[item.name].push(item.value);
-            return obj;
-        }, {});
-
-        alert(JSON.stringify(userInput));
-
-
+        if(!($('#class-name').val() && $('#id-number').val() && $('#student-name').val())){
+            $('#modal').show();
+        } else {
+            $('#form').submit();
+        }
     });
 });
