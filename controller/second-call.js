@@ -1,4 +1,4 @@
-var testPaper = require('../config/test-paper.json');
+var testPaper = require('../seed/test-paper.json');
 var topicFactory = require('../models/factory.js');
 var getInput = require('../models/get-input.js');
 var Score = require('../models/score.js');

@@ -1,4 +1,4 @@
-var testPaper = require('../config/test-paper.json');
+var testPaper = require('../seed/test-paper.json');
 var topicFactory = require('../models/factory.js');
 
 function firstCall(req, res) {
