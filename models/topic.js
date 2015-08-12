@@ -7,7 +7,4 @@ function Topic(type,question,options,answer,score,input){
     this.input = input;
 }
 
-
-
-
 module.exports = Topic;
