@@ -7,7 +7,7 @@ function JudgeTopic(question,options,answer,score,input){
 JudgeTopic.prototype = Object.create(Topic.prototype);
 JudgeTopic.prototype.constructor = JudgeTopic;
 
-JudgeTopic.prototype.getScore = function(){
+JudgeTopic.prototype.mark = function(){
 
 };
 

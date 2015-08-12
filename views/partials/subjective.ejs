@@ -5,9 +5,8 @@
             <% for(var i = 0;i < allTopic.subjective.length; i++) { %>
             <li>
                 <label><%= allTopic.subjective[i].question %><br>
-                    <textarea class="form-control" name="subjective<%= i %>" rows="8" cols="110" <% if(allTopic.subjective[i].input){ %>
-                              value=<%= allTopic.subjective[i].input %>
-                            <%  } %>></textarea></label><br>
+                    <textarea class="form-control" name="subjective<%= i %>" rows="8" cols="110"
+                            ><% if(allTopic.subjective[i].input){ %><%= allTopic.subjective[i].input %><%  } %></textarea></label><br>
             </li>
             <% } %>
         </ol>

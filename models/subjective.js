@@ -7,7 +7,7 @@ function SubjectiveTopic(question,options,answer,score,input){
 SubjectiveTopic.prototype = Object.create(Topic.prototype);
 SubjectiveTopic.prototype.constructor = SubjectiveTopic;
 
-SubjectiveTopic.prototype.getScore = function(){
+SubjectiveTopic.prototype.mark = function(){
 
 };
 

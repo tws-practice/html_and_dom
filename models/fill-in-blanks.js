@@ -7,8 +7,8 @@ function FillInBlanksTopic(question,options,answer,score,input){
 FillInBlanksTopic.prototype = Object.create(Topic.prototype);
 FillInBlanksTopic.prototype.constructor = FillInBlanksTopic;
 
-FillInBlanksTopic.prototype.getScore = function(){
-
+FillInBlanksTopic.prototype.mark = function(){
+    
 };
 
 
