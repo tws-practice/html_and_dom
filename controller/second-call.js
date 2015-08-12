@@ -31,6 +31,7 @@ function secondCall(req,res){
 
     allTopic = getInput(data,allTopic);
 
+    console.log(allTopic);
     res.render('index',
         {
             score: '',

@@ -24,7 +24,6 @@ function firstCall(req, res) {
         }
 
     }
-    console.log(allTopic);
 
     res.render('index',
         {
