@@ -6,7 +6,11 @@
             <li>
                 <p><%= allTopic.judge[i].question %></p>
                 <% for(var choice in allTopic.judge[i].options) { %>
-                <label><input type="radio" name="judge<%= i %>" value="<%= choice %>">
+                <label><input type="radio" name="judge<%= i %>" value="<%= choice %>"<% if(allTopic.judge[i].input){ %>
+                            <% if(choice === allTopic.judge[i].input){ %>
+                              checked = "checked"
+                            <% } %>
+                            <%  } %>>
                     <%= allTopic.judge[i].options[choice] %></label><br>
                 <% } %>
             </li>

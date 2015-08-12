@@ -6,7 +6,11 @@
             <li>
                 <p><%= allTopic.multi_choose[i].question %></p>
                 <% for(var choice in allTopic.multi_choose[i].options) { %>
-                <label><input type="checkbox" name="multi_choose<%= i %>" value="<%= choice %>">
+                <label><input type="checkbox" name="multi_choose<%= i %>" value="<%= choice %>"<% if(allTopic.multi_choose[i].input){ %>
+                            <% if(allTopic.multi_choose[i].input.indexOf(choice) !== -1){ %>
+                              checked = "checked"
+                            <% } %>
+                            <%  } %>>
                     （<%= choice %>）<%= allTopic.multi_choose[i].options[choice] %></label><br>
                 <% } %>
             </li>

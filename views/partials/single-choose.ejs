@@ -8,7 +8,9 @@
                 <% var x = 0 %>
                 <% for(var choice in allTopic.single_choose[i].options) { %>
                 <label><input type="radio" name="single_choose<%= i %>" value="<%= choice %>"<% if(allTopic.single_choose[i].input){ %>
-
+                            <% if(choice === allTopic.single_choose[i].input){ %>
+                            checked = "checked"
+                            <% } %>
                             <%  } %>>
                     （<%= choice %>）<%= allTopic.single_choose[i].options[choice] %></label><br>
                 <% x++ %>
