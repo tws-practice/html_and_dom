@@ -1,15 +1,13 @@
-<% var question = data.questions.multi_choose %>
-
 <section class="panel panel-default">
-    <div class="panel-heading"><h3 class="panel-title">三、<%= question.title %></h3></div>
+    <div class="panel-heading"><h3 class="panel-title">三、多选题</h3></div>
     <div class="panel-body">
         <ol>
-            <% for(var i = 0;i < question.detail.length; i++) { %>
+            <% for(var i = 0;i < allTopic.multi_choose.length; i++) { %>
             <li>
-                <p><%= question.detail[i].topic %></p>
-                <% for(var choice in question.detail[i].choices) { %>
+                <p><%= allTopic.multi_choose[i].question %></p>
+                <% for(var choice in allTopic.multi_choose[i].options) { %>
                 <label><input type="checkbox" name="multi_choose<%= i %>" value="<%= choice %>">
-                    （<%= choice %>）<%= question.detail[i].choices[choice] %></label><br>
+                    （<%= choice %>）<%= allTopic.multi_choose[i].options[choice] %></label><br>
                 <% } %>
             </li>
             <% } %>

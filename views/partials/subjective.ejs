@@ -1,13 +1,13 @@
-<% var question = data.questions.subjective %>
-
 <section class="panel panel-default">
-    <div class="panel-heading"><h3 class="panel-title">五、<%= question.title %></h3></div>
+    <div class="panel-heading"><h3 class="panel-title">五、问答题</h3></div>
     <div class="panel-body">
         <ol>
-            <% for(var i = 0;i < question.detail.length; i++) { %>
+            <% for(var i = 0;i < allTopic.subjective.length; i++) { %>
             <li>
-                <label><%= question.detail[i].topic %><br>
-                    <textarea class="form-control" name="subjective<%= i %>" rows="8" cols="110"></textarea></label><br>
+                <label><%= allTopic.subjective[i].question %><br>
+                    <textarea class="form-control" name="subjective<%= i %>" rows="8" cols="110" <% if(allTopic.subjective[i].input){ %>
+                              value=<%= allTopic.subjective[i].input %>
+                            <%  } %>></textarea></label><br>
             </li>
             <% } %>
         </ol>
