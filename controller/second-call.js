@@ -1,6 +1,7 @@
 var testPaper = require('../config/test-paper.json');
 var topicFactory = require('../models/factory.js');
-var getInput = require('../models/get-input');
+var getInput = require('../models/get-input.js');
+var Score = require('../models/score.js');
 
 function secondCall(req,res){
     var data = req.body;
@@ -31,10 +32,13 @@ function secondCall(req,res){
 
     allTopic = getInput(data,allTopic);
 
+    var score = new Score();
+    score.markAll(allTopic);
+
     console.log(allTopic);
     res.render('index',
         {
-            score: '',
+            score: score.score,
             className: data.className,
             idNumber: data.idNumber,
             studentName: data.studentName,

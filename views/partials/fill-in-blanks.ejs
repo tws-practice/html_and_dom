@@ -8,7 +8,11 @@
             <label><%= i+1 %>.&nbsp;&nbsp;<%= allTopic.fill_in_blanks[i].question %></label>
             <% for(var x = 0; x < allTopic.fill_in_blanks[i].answer.length; x++) { %>
             <input class="form-control" type="text" name="fill_in_blanks<%= i %>" <% if(allTopic.fill_in_blanks[i].input){ %>
-                    value=<%= allTopic.fill_in_blanks[i].input[x] %>
+                   <% if(Array.isArray(allTopic.fill_in_blanks[i].input)) { %>
+                   value=<%= allTopic.fill_in_blanks[i].input[x] %>
+                   <% } else {%>
+                   value=<%= allTopic.fill_in_blanks[i].input %>
+                    <% } %>
           <%  } %>>&nbsp;
             <% } %>
         </li>
@@ -16,3 +20,4 @@
         <% } %>
     </ol>
 </section>
+
