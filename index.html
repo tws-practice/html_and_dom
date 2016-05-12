@@ -3,66 +3,77 @@
 <head>
     <meta charset="utf-8">
     <title>统一建模语言理论测试</title>
-    <script language="JavaScript" src="countScore.js"></script>
 </head>
 <body>
-<div id="divDemo">
-    <header><h4>西安软件服务外包学院</h4>
-        <hr/>
-        <h1>统一建模语言理论测试</h1></header>
-    <article>
-        <p><label>科目:<input value="统一建模语言UML" disabled="disabled"/></label>
-            <label>时间：<input value="100分钟" disabled="disabled"/></label>
-            <label>得分:<input type="text" id="userScore" readonly="readonly"/></label></p>
-        <p><label>班级:<input type="text" id="userClass"/></label>
-            <label>姓名:<input type="text" id="userName"/></label>
-            <label>学号:<input type="text" id="userId"/></label></p>
-    </article>
-    <article>
-        <section><h3>一、填空题</h3>
-            <p><label>1.UML 的中文全称是:<input type="text" id="fillBlank1"/></label></p>
-            <p><label>2.对象最突出的特征是:<input type="text" id="fillBlank2"/><input type="text" id="fillBlank3"/><input
-                    type="text" id="fillBlank4"/></label></p>
-        </section>
-        <section><h3>二、选择题</h3>
-            <h4>1.UML与软件工程的关系是:</h4>
-            <p><label><input name='a1' type="radio"/>A.UML就是软件工程</label></p>
-            <p><label><input name='a1' type="radio"/>B.UML参与到软件工程中软件开发过程的几个阶段</label></p>
-            <p><label><input name='a1' type="radio"/>C.UML与软件工程无关</label></p>
-            <p><label><input name='a1' type="radio"/>D.UML是软件工程的一部分</label></p>
-            <h4>2.Java 语言支持:</h4>
-            <p><label><input name="a2" type="radio"/>A.单继承</label></p>
-            <p><label><input name="a2" type="radio"/>B.多继承</label></p>
-            <p><label><input name="a2" type="radio"/>C.单继承和多继承都支持</label></p>
-            <p><label><input name="a2" type="radio"/>D.单继承和多继承都不支持</label></p>
-        </section>
-        <section><h3>三、多选题</h3>
-            <h4>1.用例的粒度分为以下哪三种:</h4>
-            <p><label><input name="b1" type="checkbox" value="0"/>A.概述级</label></p>
-            <p><label><input name="b1" type="checkbox" value="1"/>B.需求级</label></p>
-            <p><label><input name="b1" type="checkbox" value="2"/>C.用户目标级</label></p>
-            <p><label><input name="b1" type="checkbox" value="3"/>D.子功能级</label></p>
+<header>
+    <h4>西安软件服务外包学院</h4>
+    <h1>统一建模语言理论测试</h1>
+</header>
 
-            <h4>2.类图由以下哪三部分组成:</h4>
-            <p><label><input name="b2" type="checkbox" value="0"/>A.名称(Name)</label></p>
-            <p><label><input name="b2" type="checkbox" value="1"/>B.属性(Attribute)</label></p>
-            <p><label><input name="b2" type="checkbox" value="2"/>C.操作(Operation)</label></p>
-            <p><label><input name="b2" type="checkbox" value="3"/>D.方法(Function)</label></p>
-        </section>
-        <section><h3>四、判断题</h3>
-            <h4>1.用例图只是用于和客户交流和沟通的,用于确定需求。</h4>
-            <p><label><input name="c1" type="radio"/>正确</label>
-                <label><input name="c1" type="radio"/>错误</label></p>
-            <h4>2.在状态图中,终止状态在一个状态图中允许有任意多个。</h4>
-            <p><label><input name="c2" type="radio"/>正确</label>
-                <label><input name="c2" type="radio"/>错误</label></p>
-        </section>
-        <section><h3>五、简答题</h3>
-            <h4>简述什么是模型以及模型的表现形式?</h4>
-            <p><label><textarea id="text"></textarea></label></p>
-        </section>
-    </article>
-    <button id="countButton" onclick="count()">提交计算分数</button>
-</div>
+<article>
+    <p><label>科目:<input value="统一建模语言UML" disabled="disabled"/></label>
+        <label>时间：<input value="100分钟" disabled="disabled"/></label>
+        <label>得分:<input type="text" id="userScore" readonly="readonly"/></label></p>
+    <p><label>班级:<input type="text" id="userClass"/></label>
+        <label>姓名:<input type="text" id="userName"/></label>
+        <label>学号:<input type="text" id="userId"/></label></p>
+</article>
+
+<article>
+    <section>
+        <h3>一、填空题</h3>
+        <p><label>1.UML 的中文全称是:<input type="text" id="fillBlank1"/></label></p>
+        <p><label>2.对象最突出的特征是:<input type="text" id="fillBlank2"/><input type="text" id="fillBlank3"/><input
+                type="text" id="fillBlank4"/></label></p>
+    </section>
+
+    <section>
+        <h3>二、选择题</h3>
+        <h4>1.UML与软件工程的关系是:</h4>
+        <p><label><input name='a1' type="radio" value="A"/>A.UML就是软件工程</label></p>
+        <p><label><input name='a1' type="radio" value="B"/>B.UML参与到软件工程中软件开发过程的几个阶段</label></p>
+        <p><label><input name='a1' type="radio" value="C"/>C.UML与软件工程无关</label></p>
+        <p><label><input name='a1' type="radio" value="D"/>D.UML是软件工程的一部分</label></p>
+
+        <h4>2.Java 语言支持:</h4>
+        <p><label><input name="a2" type="radio" value="A"/>A.单继承</label></p>
+        <p><label><input name="a2" type="radio" value="B"/>B.多继承</label></p>
+        <p><label><input name="a2" type="radio" value="C"/>C.单继承和多继承都支持</label></p>
+        <p><label><input name="a2" type="radio" value="D"/>D.单继承和多继承都不支持</label></p>
+    </section>
+    <section><h3>三、多选题</h3>
+        <h4>1.用例的粒度分为以下哪三种:</h4>
+        <p><label><input name="b1" type="checkbox" value="0"/>A.概述级</label></p>
+        <p><label><input name="b1" type="checkbox" value="1"/>B.需求级</label></p>
+        <p><label><input name="b1" type="checkbox" value="2"/>C.用户目标级</label></p>
+        <p><label><input name="b1" type="checkbox" value="3"/>D.子功能级</label></p>
+
+        <h4>2.类图由以下哪三部分组成:</h4>
+        <p><label><input name="b2" type="checkbox" value="0"/>A.名称(Name)</label></p>
+        <p><label><input name="b2" type="checkbox" value="1"/>B.属性(Attribute)</label></p>
+        <p><label><input name="b2" type="checkbox" value="2"/>C.操作(Operation)</label></p>
+        <p><label><input name="b2" type="checkbox" value="3"/>D.方法(Function)</label></p>
+    </section>
+
+    <section>
+        <h3>四、判断题</h3>
+        <h4>1.用例图只是用于和客户交流和沟通的,用于确定需求。</h4>
+        <p><label><input name="c1" type="radio" value="right"/>正确</label>
+            <label><input name="c1" type="radio" value="error"/>错误</label></p>
+        <h4>2.在状态图中,终止状态在一个状态图中允许有任意多个。</h4>
+        <p><label><input name="c2" type="radio" value="right"/>正确</label>
+            <label><input name="c2" type="radio" value="error"/>错误</label></p>
+    </section>
+
+    <section>
+        <h3>五、简答题</h3>
+        <h4>简述什么是模型以及模型的表现形式?</h4>
+        <p><label><textarea id="text"></textarea></label></p>
+    </section>
+</article>
+<button id="countButton">提交计算分数</button>
+
 </body>
+<script language="JavaScript" src="jquery.min.js"></script>
+<script language="JavaScript" src="countScore.js"></script>
 </html>

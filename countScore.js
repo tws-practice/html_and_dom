@@ -1,8 +1,10 @@
-function count() {
-    if (isEmptyMessage()) {
-        countScore();
-    }
-}
+$(document).ready(function () {
+    $('#countButton').click(function () {
+        if (isEmptyMessage()) {
+            countScore();
+        }
+    });
+});
 
 function countScore() {
     var score = 0;
@@ -13,8 +15,7 @@ function countScore() {
     score += countJudgeScore();
     score += countTextQuestionScore();
 
-    document.getElementById("userScore").value = score;
-
+    $('#userScore').val(score);
 }
 
 function countTextQuestionScore() {
@@ -27,127 +28,113 @@ function countTextQuestionScore() {
     var arr2 = text.match(regExp2);
     var arr3 = text.match(regExp3);
 
-    textQuestionScore += arr1.length * 3 + arr2.length * 2 + arr3.length * 2;
+    textQuestionScore += addScore(arr1) + addScore(arr2) + addScore(arr3);
 
     return textQuestionScore;
 }
 
+function addScore(arr) {
+    if (arr == null) {
+        return 0;
+    } else {
+        return arr.length * 3;
+    }
+}
+
 function countJudgeScore() {
     var judgeScore = 0;
-    var userAnswer1 = document.getElementsByName('c1');
-    var userAnswer2 = document.getElementsByName('c2');
-    var answer1Index = 1;
-    var answer2Index = 0;
+    var userAnswer1 = $("input[name='c1']:checked").val();
+    var userAnswer2 = $("input[name='c2']:checked").val();
+    var answer1 = 'error';
+    var answer2 = 'right';
 
-    if (typeRadioJudge(userAnswer1, answer1Index)) {
-        judgeScore += 10;
-    }
-    if (typeRadioJudge(userAnswer2, answer2Index)) {
-        judgeScore += 10;
-    }
+    judgeScore += addSelectScore(userAnswer1, answer1)
+        + addSelectScore(userAnswer2, answer2);
 
     return judgeScore;
 }
 
 function countMultipleChoiceScore() {
     var multipleChoice = 0;
-    var answer1 = {length: 3, sum: 4};
-    var answer2 = {length: 3, sum: 3};
-    var choices1 = document.getElementsByName("b1");
-    var choices2 = document.getElementsByName("b2");
-    var userAnswer1 = countUserAnswer(choices1);
-    var userAnswer2 = countUserAnswer(choices2);
 
-    if (typeCheckboxJudge(userAnswer1, answer1)) {
-        multipleChoice += 10;
-    }
-    if (typeCheckboxJudge(userAnswer2, answer2)) {
-        multipleChoice += 10;
-    }
+    var value1 = '013';
+    var value2 = '012';
+    var userValue1 = getMultipleValue($("input[name='b1']:checked"));
+    var userValue2 = getMultipleValue($("input[name='b2']:checked"));
+
+    multipleChoice += addSelectScore(userValue1, value1)
+        + addSelectScore(userValue2, value2);
 
     return multipleChoice;
 }
 
-function typeCheckboxJudge(userAnswer, answer) {
-    if (userAnswer.length === answer.length && userAnswer.sum === answer.sum) {
-        return true;
-    }
-}
+function getMultipleValue(choices) {
+    var value = '';
 
-function countUserAnswer(choices) {
-    var sum = 0;
-    var len = 0;
-
-    for (var i = 0; i < choices.length; i++) {
-        if (choices[i].checked) {
-            sum += parseInt(choices[i].value);
-            len++;
-        }
+    if (choices.length > 0) {
+        choices.each(function (choice) {
+            value += $(this).val();
+        });
     }
 
-    return {length: len, sum: sum};
+    return value;
 }
 
 function countSingleChoiceScore() {
     var singleChoiceScore = 0;
-    var answer1Index = 1;
-    var answer2Index = 0;
-    var userAnswer1 = document.getElementsByName("a1");
-    var userAnswer2 = document.getElementsByName("a2");
+    var answer1 = 'B';
+    var answer2 = 'A';
+    var userAnswer1 = $("input[name='a1']:checked").val();
+    var userAnswer2 = $("input[name='a2']:checked").val();
 
-    if (typeRadioJudge(userAnswer1, answer1Index)) {
-        singleChoiceScore += 10;
-    }
-    if (typeRadioJudge(userAnswer2, answer2Index)) {
-        singleChoiceScore += 10;
-    }
+    singleChoiceScore += addSelectScore(userAnswer1, answer1) +
+        addSelectScore(userAnswer2, answer2);
 
     return singleChoiceScore;
 }
 
-function typeRadioJudge(userAnswer, index) {
+function addSelectScore(userAnswer, answer) {
+    var score = 0;
 
-    return userAnswer[index].checked
+    if (userAnswer === answer) {
+        score += 10;
+    }
+
+    return score;
 }
 
 function countFillBlankScore() {
-
-    var userAnswer1 = document.getElementById("fillBlank1").value;
-    var userAnswer2 = [document.getElementById("fillBlank2").value,
-        document.getElementById("fillBlank3").value,
-        document.getElementById("fillBlank4").value];
+    var userAnswer1 = [$('#fillBlank1').val()];
+    var userAnswer2 = [$('#fillBlank2').val(),
+        $('#fillBlank3').val(), $('#fillBlank4').val()];
     var answer1 = ['统一建模语言'];
     var answer2 = ['封装性', '继承性', '多态性'];
     var fillBlankScore = 0;
 
-    if (fillBlankJudge(userAnswer1, answer1)) {
-        fillBlankScore += 5;
-    }
-
-    userAnswer2.forEach(function (item) {
-        if (fillBlankJudge(item, answer2)) {
-            fillBlankScore += 5;
-        }
+    fillBlankScore += addFillBlankScore(userAnswer1, answer1);
+    userAnswer2.forEach(function (userAnswerItem) {
+        fillBlankScore += addFillBlankScore(userAnswerItem, answer2);
     });
 
     return fillBlankScore;
 }
 
-function fillBlankJudge(userAnswer, answer) {
-    var temp;
+function addFillBlankScore(userAnswer, answer) {
+    var score = 0;
+
     answer.forEach(function (item) {
         if (item === userAnswer) {
-            temp = true;
+            score += 5;
         }
     });
-    return temp;
+    return score;
 }
 
-
 function isEmptyMessage() {
-    var userClass = document.getElementById("userClass").value;
-    var userName = document.getElementById("userName").value;
-    var userId = document.getElementById("userId").value;
+    var userClass = $('#userClass').val();
+    var userName = $('#userName').val();
+    var userId = $('#userId').val();
+
     if (userClass && userId && userName) {
         return true;
     } else {
