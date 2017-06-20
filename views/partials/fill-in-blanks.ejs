@@ -1,0 +1,23 @@
+<section class="panel panel-default">
+    <div class="panel-heading"><h3 class="panel-title">一、填空题</h3></div>
+    <ol class="list-group">
+
+        <% for(var i = 0;i < allTopic.fill_in_blanks.length; i++) { %>
+
+        <li class="list-group-item form-inline">
+            <label><%= i+1 %>.&nbsp;&nbsp;<%= allTopic.fill_in_blanks[i].question %></label>
+            <% for(var x = 0; x < allTopic.fill_in_blanks[i].answer.length; x++) { %>
+            <input class="form-control" type="text" name="fill_in_blanks<%= i %>" <% if(allTopic.fill_in_blanks[i].input){ %>
+                   <% if(Array.isArray(allTopic.fill_in_blanks[i].input)) { %>
+                   value=<%= allTopic.fill_in_blanks[i].input[x] %>
+                   <% } else {%>
+                   value=<%= allTopic.fill_in_blanks[i].input %>
+                    <% } %>
+          <%  } %>>&nbsp;
+            <% } %>
+        </li>
+
+        <% } %>
+    </ol>
+</section>
+

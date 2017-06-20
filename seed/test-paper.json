@@ -1,0 +1,69 @@
+{
+  "paper":[
+    {
+      "type":"fill_in_blanks",
+      "question":"UML的中文全称是:",
+      "options":{},
+      "answer":["统一建模语言"],
+      "score":5,
+      "input":""
+    },
+    {
+      "type":"fill_in_blanks",
+      "question":"对象最突出的特征是:",
+      "options":{},
+      "answer":["封装性", "继承性", "多态性"],
+      "score":5,
+      "input":""
+    },{
+      "type":"single_choose",
+      "question":"UML与软件工程的关系是:",
+      "options":{"A": "UML就是软件工程", "B": "UML参与到软件工程中软件开发过UML", "C": "UML与软件工程无关", "D": "UML是软件工程的一部分"},
+      "answer":"A",
+      "score":10,
+      "input":""
+    },{
+      "type":"single_choose",
+      "question":"Java 语言支持:",
+      "options":{"A": "单继承", "B": "多继承", "C": "单继承和多继承都支持", "D": "继承和多继承都不支持"},
+      "answer":"A",
+      "score":10,
+      "input":""
+    },{
+      "type":"multi_choose",
+      "question":"用例的粒度分为以下哪三种？",
+      "options":{"A": "概述级", "B": "需求级", "C": "用户目标级", "D": "子功能级"},
+      "answer":"ABD",
+      "score":10,
+      "input":""
+    },{
+      "type":"multi_choose",
+      "question":"类图由以下哪三部分组成？",
+      "options":{"A": "名称(Name)", "B": "属性(Attribute)", "C": "操作(Operation)", "D": "方法(Function)"},
+      "answer":"ABC",
+      "score":10,
+      "input":""
+    },{
+      "type":"judge",
+      "question":"用例图只是用于和客户交流和沟通的,用于确定需求。",
+      "options":{"true": "true", "false": "false"},
+      "answer":"false",
+      "score":10,
+      "input":""
+    },{
+      "type":"judge",
+      "question":"在状态图中,终止状态在一个状态图中允许有任意多个。",
+      "options":{"true": "true", "false": "false"},
+      "answer":"true",
+      "score":10,
+      "input":""
+    },{
+      "type":"subjective",
+      "question":"简述什么是模型以及模型的表现形式?",
+      "options":{},
+      "answer":"模型是对现实世界的简化和抽象,模型是对所研究的系统、过程、事物或概念的一种表达形式。",
+      "score":20,
+      "input":""
+    }
+  ]
+}
